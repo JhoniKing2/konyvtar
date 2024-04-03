@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="kolcsonzott.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[url('./pics/fa.jpg')]">
+    <nav class="bg-orange-900 border-b-2">
+        <div class="">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-start">
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="home.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Főoldal</a>
+                  <a href="könyvek.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Könyvek</a>
+                  <a href="kolcsonzott.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Kölcsönzött Könyeim</a>
+                  <a href="Kolcsonzes.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Kölcsönzés</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <!-- Profile dropdown -->
+              <div id="userNavbar" class="">
+                <div class="flex gap-5 justify-center items-center pr-10">
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <img class="h-8 w-8 rounded-full" src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" alt="">
+                  </button>
+                  <div class="text-white" id="username"></div>
+                  <div id="logout" class="hover:bg-amber-400 p-3 rounded-xl flex justify-center items-center"><img class="h-6 w-6 hover:cursor-pointer" src="./pics/logout.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="lista">      
+      </div>
+     
+      </body>
+</body>
+</html>

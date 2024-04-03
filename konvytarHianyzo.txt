@@ -1,0 +1,11 @@
+kolcsonzes Dátum
+Visszahozatal Dátum (opcionális) (mikor visszajön)
+Kolcsonzott => Kolcsönzések
+
+Keses + Keses mennyiseg/hossz
+	A visszahozatal Dátuma nagyobb mint a határidő
+	a kölcsönzések táblában akkor jön létre egy késés rekord
+	a kölcsönzés azonosítójával és a késés mennyiségével
+
+egy egyes kapcsolat feloldása kölcsönzés és a késés között
+végig gondolni a büntetés

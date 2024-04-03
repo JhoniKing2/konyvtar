@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="home.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[url('./pics/fa.jpg')]">
+    <nav class="bg-orange-900 border-b-2">
+        <div class="">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-start">
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="home.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Főoldal</a>
+                  <a href="könyvek.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Könyvek</a>
+                  <a href="kolcsonzott.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Kölcsönzött Könyeim</a>
+                  <a href="Kolcsonzes.html" class="text-sm hover:bg-amber-300 hover:text-white rounded-md px-3 py-2 text-amber-700 font-medium border-2 border-amber-500 bg-amber-100">Kölcsönzés</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <!-- Profile dropdown -->
+              <div id="userNavbar" class="">
+                <div class="flex gap-5 justify-center items-center pr-10">
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <img class="h-8 w-8 rounded-full" src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" alt="">
+                  </button>
+                  <div class="text-white" id="username"></div>
+                  <div id="logout" class="hover:bg-amber-400 p-3 rounded-xl flex justify-center items-center"><img class="h-6 w-6 hover:cursor-pointer" src="./pics/logout.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- component -->
+
+<div class='m-12 space-y-6 bg-orange-900 px-20 py-16 border rounded-3xl shadow-2xl drop-shadow-2xl'> 
+   <div class='m-12 space-y-6 bg-amber-500 border-amber-700 border-double border-8 px-16 py-12 border rounded-3xl text-center shadow-2xl drop-shadow-2xl'>
+    <p class="text-3xl text-amber-700 font-bold">SZABÁLYOK</p>
+    <p class="text-amber-700 text-l">Magyar/angol</p>
+  </div>          
+  <div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+      <p class="font-bold">KÉSÉS</p>
+      <p class="text-sm">Késés esetén az olvasó kap 1 jelzést amit a profilja alatt láthat és pénzbüntetést szabunk ki</p>
+      <p class="text-sm">5 jelzés után a felhasználót kitiltjuk</p>
+  </div>
+  
+  <div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+      <p class="font-bold">KÖNYVEK</p>
+      <p class="text-sm">A könyvek nem megfelelő állapotba visszajuttatása pénz büntetést és 1 jelzést von maga után</p>
+      <p class="text-sm">Ha a könyv egyáltalán nem jelenik meg nálunk egy bizonyos idő után súlyosabb pénz büntetés fogja érni és teljes kitiltás</p>
+  </div>
+
+  <div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+      <p class="font-bold">INFORMÁCIÓ</p>
+      <p class="text-sm">Téves Információ esetén csak jelezzen az nekünk és segíteünk önnek ennek a javításásval</p>
+      <p class="text-sm">De ha téves információt használ rendelésre és nem tervezi váltosztatni akkor kitiltásban részesítjük</p>
+  </div>
+  <br>
+  <p class="border border-4 border-amber-500"></p>
+  <br>
+
+  <div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+      <p class="font-bold">LATE RETURN</p>
+      <p class="text-sm">Returning a book after the deadline will reward you with a mark and you will have to pay a fine</p>
+      <p class="text-sm">you can check these marks under your profile after your fifth mark you will be banned</p>
+  </div>
+
+  <div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+    <p class="font-bold">BOOKS</p>
+    <p class="text-sm">Returning a book not in it's proper state will result in a fine and a mark aswell</p>
+    <p class="text-sm">If the rented book never returns to us that will result a permanent ban from the site and a way heavier fine</p>
+</div>
+
+<div class="bg-amber-100 border-amber-500 text-amber-700 border-2 px-4 py-3 rounded-lg shadow-2xl drop-shadow-2xl" role="alert">
+  <p class="font-bold">INFROMATION</p>
+  <p class="text-sm">If you gave us your information and something is wrong with it you can reach out to us and we will modify it for you</p>
+  <p class="text-sm">If the user continues to use incorrect information to rent books the user will end up getting permanently banned</p>
+</div>
+
+</div>
+</body>
+</html>
+
