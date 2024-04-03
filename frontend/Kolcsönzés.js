@@ -118,5 +118,5 @@ kolcsonzoGomb.addEventListener('click', async () => {
     console.log(data)
     console.log(response)
 
-    alert("Sikeres kölcsönzés \n\t kellemes olvasást ")
+    alert("Sikeres kölcsönzés \n\t kellemes olvasást ");
 })
