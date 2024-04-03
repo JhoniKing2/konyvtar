@@ -41,7 +41,7 @@ const insert = async (konyv) => {
             konyvek.push(book);
             sessionStorage.setItem('book', JSON.stringify(konyvek));
 
-            alert("a könyvet a kölcsönzésnél láthatja majd")
+            alert("a könyvet a kölcsönzésnél láthatja majd ")
     })
 
     gomb.textContent ="Megtekités"
