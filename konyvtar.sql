@@ -1,11 +1,9 @@
-CREATE DATABASE IF NOT EXISTS konyvtar;
-
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Már 11. 13:42
+-- Létrehozás ideje: 2024. Ápr 04. 12:47
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -60,7 +58,12 @@ CREATE TABLE `kolcsonzo` (
 --
 
 INSERT INTO `kolcsonzo` (`id`, `nev`, `email`, `jelszo`, `elsolatogatas`, `lakcim`, `telszam`, `kesesek`) VALUES
-(1, 'béla', 'béla562@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$oAEX1c3/xiLuZPFFGdUoAA$hAeSj4if6C2gnVsW8CYzWtf7Voj2BrLeI36I4mYbpfg', '2024-03-06 09:53:39.831', 'noutca 21', '06409483237', NULL);
+(1, 'béla', 'béla562@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$oAEX1c3/xiLuZPFFGdUoAA$hAeSj4if6C2gnVsW8CYzWtf7Voj2BrLeI36I4mYbpfg', '2024-03-06 09:53:39.831', 'noutca 21', '06409483237', NULL),
+(2, 'Jani', 'dezsijanos@taszi.hu', '$argon2id$v=19$m=65536,t=3,p=4$k0XG1tU+YAy9LIC8zE3Q6w$6MYj9Chz0En2hicCNPhFqZYW+sJUWTJwpiWNSr6q00w', '2024-03-22 10:48:20.718', 'nemmondom u.68', '062093856791', NULL),
+(3, 'géza', 'valahol@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$Z2/I3jvG8upld8vqGzLCDA$sww+tjMEDqgYtjHXayL9pyAcMe3YNF1u1rtV+9TnSOM', '2024-03-26 11:43:55.082', 'valahol 31', '032424145', NULL),
+(4, 'Harag Csaba', 'csabesz978@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$L7pkSDEF0T+m2hHEsT/+Tg$5keEsYS6iq9HjqrZYajiOYRnNAUb8Og5GarGDNUBgPQ', '2024-04-04 09:31:13.096', 'Dobozi út 67', '06206579842', NULL),
+(5, 'Kovács Péter', 'petya36@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$axMvzFMLYvbMKjRa8cp6lg$FIxut5pyNA2xV+C9cjmdSSUY7O0lhnyX2LbDpvTle/Y', '2024-04-04 09:51:19.933', 'Békési út 17', '06204569134', NULL),
+(7, 'Lepel Sándor', 'sanya756@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$ZBiEJhyhyY1rRGZxEXS2BQ$PdHc0msa5nPmSitvl9DMTdoAEPBOcIDF7wmjAVu509o', '2024-04-04 09:58:08.329', 'Dombi Lajos u.54', '06209546782', NULL);
 
 -- --------------------------------------------------------
 
@@ -96,9 +99,14 @@ CREATE TABLE `konyvek` (
 --
 
 INSERT INTO `konyvek` (`id`, `cim`, `iro`, `kategoria`, `kiadasDatuma`) VALUES
-(2, 'Egri Csillagok', 'Gárdonyi Géza', '19. századi magyar regények', '1901'),
-(3, 'A Pál Utcai fiúk', 'Molnár Ferenc', '20. századi magyar regények', '1907'),
-(4, 'Az ajtó', 'Szabó Magda', '1987 regényei', '1987');
+(42, 'A kőszívű ember fiai', 'Jókai Mór', 'regény', '1869-01-01'),
+(44, 'Az arany ember', 'Jókai Mór', 'regény', '1872-01-01'),
+(45, 'Egy magyar nábob', 'Jókai Mór', 'regény', '1894-01-01'),
+(46, 'A Pál utcai fiúk', 'Molnár Ferenc', 'regény', '1906-01-01'),
+(47, 'Légy jó mindhalálig', 'Móricz Zsigmond', 'regény', '1932-01-01'),
+(48, 'Forró mezők', 'Móricz Zsigmond', 'regény', '1939-01-01'),
+(49, 'Édes Anna', 'Kosztolányi Dezső', 'regény', '1926-01-01'),
+(50, 'Aranysárkány', 'Kosztolányi Dezső', 'regény', '1925-01-01');
 
 -- --------------------------------------------------------
 
@@ -184,19 +192,19 @@ ALTER TABLE `keses`
 -- AUTO_INCREMENT a táblához `kolcsonzo`
 --
 ALTER TABLE `kolcsonzo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT a táblához `kolcsonzott`
 --
 ALTER TABLE `kolcsonzott`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT a táblához `konyvek`
 --
 ALTER TABLE `konyvek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Megkötések a kiírt táblákhoz

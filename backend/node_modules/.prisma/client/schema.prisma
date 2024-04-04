@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Kolcsonzo{
+  id Int @id @default(autoincrement())
+  nev String
+  email String @unique
+  jelszo String
+  elsolatogatas DateTime @default(now())
+  lakcim String
+  telszam String
+  kesesek Int?                                                                                                                   
+  kolcsonzesek Kolcsonzesek[]
+  @@map("Kolcsonzo")
+}
+model Konyvek{
+  id Int @id @default(autoincrement())
+  cim String
+  iro String
+  kategoria String
+  kiadasDatuma String
+  kolcsonzesek Kolcsonzesek[]
+  @@map("Konyvek")
+}
+model Kolcsonzesek{
+  id Int @id @default(autoincrement())
+  kivitel DateTime @default(now())
+  hatarido DateTime
+  Visszahozatal DateTime?
+  kcs_id Int
+  kny_id Int
+  kolcsonzo Kolcsonzo @relation(fields: [kcs_id], references: [id])
+  konyv Konyvek @relation(fields: [kny_id], references: [id])
+  kesett Keses[]
+  @@map("Kolcsonzott")
+}
+
+model Keses{
+id Int @id @default(autoincrement())
+kolcsonzott Kolcsonzesek @relation(fields: [kcsn_id], references: [id])
+kcs_id Int
+kny_id Int
+kcsn_id Int
+kesettNapok Int
+kesesDij Int
+@@map("Keses")
+}
+
