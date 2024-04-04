@@ -1,0 +1,4 @@
+.env fájl létrehozása
+
+DATABASE_URL="mysql://root:@localhost:3306/konyvtar"
+JWT_SECRET = "szupertitkostitok"
